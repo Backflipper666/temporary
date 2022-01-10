@@ -1,0 +1,48 @@
+.thirty {
+    list-style-type: none;
+    display: flex;
+    gap:6px;
+    flex-wrap: wrap;
+    
+}
+
+.thirty li {
+    background-color: #502cb4;
+    width: 200px;
+    height:40px;
+    color:white;
+    padding-top: 8px;
+    padding-left: 4px;
+}
+
+.thirty-one {
+    list-style-type: none;
+    display: flex;
+    gap:6px;
+    flex-wrap: wrap;
+}
+
+.thirty-one li {
+    background-color: #502cb4;
+    width: 200px;
+    height:40px;
+    color:white;
+    padding-top: 8px;
+    padding-left: 4px;
+}
+
+.twenty-eight {
+    list-style-type: none;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.twenty-eight li {
+    background-color: #502cb4;
+    width: 200px;
+    height:40px;
+    color:white;
+    padding-top: 8px;
+    padding-left: 4px;
+}
