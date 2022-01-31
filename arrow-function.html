@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Functions: Task 4</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
+    const para = document.createElement('p');
+
+   /*  function isShort(name) {
+      return name.length < 5;
+    } */
+    /* console.log((name)=> name.length < 5) */
+    function isShort() {
+        let shortList = [];
+        for (let i = 0; i < 8; i++){
+            if (names[i].length < 5) {
+                shortList.push(names[i]);
+                /* console.log(shortList); */
+                
+            }
+        }
+        console.log(shortList);
+        para.textContent = shortList;
+    }
+    
+    
+isShort();
+    
+    
+  /*   const shortNames = names.filter(isShort);
+    para.textContent = shortNames; */
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    section.appendChild(para);
+  </script>
+
+</html>
