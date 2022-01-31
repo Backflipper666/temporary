@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Functions: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+    </section>
+
+    <canvas width="480" height="320">
+
+    </canvas>
+
+  </body>
+  <script>
+    const canvas = document.querySelector('canvas');
+    const ctx = canvas.getContext('2d');
+
+ 
+
+    // Add your code here
+    function rectangle (){
+      color = prompt("What's the rectangular color?");
+      xCoordinate = prompt("What's the x coordinate?");
+      yCoordinate = prompt("What's the y coordinate?");
+      width = prompt("What's the width?");
+      height = prompt("What's the height?");
+      ctx.fillStyle = color;
+      ctx.fillRect(xCoordinate, yCoordinate, width, height);
+      ctx.fillStyle = "green";
+      ctx.fillRect(50, 150, 100, 30);
+  }
+  rectangle();
+/*     const para = document.createElement('p');
+    function rectangle(){
+      ctx.beginPath();
+      ctx.lineWidth = "4";
+      ctx.strokeStyle = "orange";
+      ctx.rect(30, 30, 50, 50);
+      ctx.stroke();
+  }
+  para.textContent = rectangle();
+  console.log(para.textContent); */
+    // Don't edit the code below here!
+
+
+    const section = document.querySelector('section');
+  </script>
+
+</html>
