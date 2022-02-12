@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>random name</title>
+    <title>Functions: Task 1</title>
     <style>
       p {
         color: purple;
@@ -28,34 +28,29 @@
   <script>
     const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
     const para = document.createElement('p');
+console.log(random(99, 111));
+        // Add your code here
+        function chooseNumber(){
+/*     let randomChoice = names[Math.floor(Math.random() * names.length)];
+    para.textContent = randomChoice; */
+    console.log(names[random(0, 7)])
+    }
+    chooseNumber();
 
-    // Add your code here
-
-  
-   function random(min, max) {
+    function random (min, max){
       min = Math.ceil(min);
       max = Math.floor(max);
-      let randomizer = Math.floor(Math.random() * (max - min + 1)) + min;
-      return randomizer;
+      return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    
 
-    function chooseName(){
-        /* const randomElement = array[Math.floor(Math.random() * array.length)]; */
-        
-        let output = names[random(0, 7)];
-        console.log(output);
-        
-        
-        
-    }
-    chooseName();
-    para.textContent = names[random(0, 7)];
+
+
+
+
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
-
 
     section.appendChild(para);
   </script>

@@ -31,39 +31,29 @@
     </ul>
 
     <script>
-        const list = document.querySelector('ul');
-        let inputField = document.querySelector('input');
-        const button = document.querySelector('button');
-        
-        
-/*         button.addEventListener('click', event => {
-  button.textContent = `Click count: ${event.detail}`;
-}); */
+      let list = document.querySelector('ul');
+      let input = document.querySelector('input');
+      let button = document.querySelector('button');
+      button.onclick = function(){
+        let inputValue = input.value;
+        input.value = '';
+        let listItem = document.createElement('li');
+        let span = document.createElement('span');
+        let deletButton = document.createElement('button');
+        listItem.appendChild(span);
+        listItem.appendChild(deletButton);
 
-        button.onclick = function() {
-            // clearing the input field
-            let myItem = inputField.value;
-            inputField.value = '';
+        span.textContent = inputValue;
+        deletButton.textContent = 'Delete';
 
-            const list_item = document.createElement('li');
-            const span = document.createElement('span');
-            const deleteButton = document.createElement('button');
+        list.appendChild(listItem);
 
-            list_item.appendChild(span);
-            span.textContent = myItem;
-            list_item.appendChild(deleteButton);
-            deleteButton.textContent = "Delete";
-            list.appendChild(list_item)
-          
-            deleteButton.onclick = function(e) {
-                list.removeChild(list_item);
-            }
-            inputField.focus();
+        deletButton.onclick = function() {
+          list.removeChild(listItem);
         }
+        input.focus();
 
-
-
-
+      }
 
     </script>
   </body>

@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>random name</title>
+    <title>Functions: Task 1</title>
     <style>
       p {
         color: purple;
@@ -30,32 +31,18 @@
     const para = document.createElement('p');
 
     // Add your code here
-
+    console.log(names[getRandomInt(0, 7)]);
   
-   function random(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      let randomizer = Math.floor(Math.random() * (max - min + 1)) + min;
-      return randomizer;
-    }
-
-    
-
-    function chooseName(){
-        /* const randomElement = array[Math.floor(Math.random() * array.length)]; */
-        
-        let output = names[random(0, 7)];
-        console.log(output);
-        
-        
-        
-    }
-    chooseName();
-    para.textContent = names[random(0, 7)];
     // Don't edit the code below here!
+    function getRandomInt (min, max){
+      min = Math.floor(min);
+      max = Math.ceil(max);
+
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+ 
 
     const section = document.querySelector('section');
-
 
     section.appendChild(para);
   </script>
