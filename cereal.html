@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Js info</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    //print greetings
+    //create while loop for greetings, so that with each iteration one letter is removed from the end until only one letter is left
+    //when it reaches one letter, add one letter with each iteration until it reaches its original size
+
+    function printGreetings() {
+      let message = "greetings";
+      let subMessage = message.substring(0, 9);
+      
+      let endIndex;
+      for (let i = message.length; i >= 1; i--) {
+        subMessage = message.substring(0, i)
+        console.log(subMessage);
+      }
+      
+      for (i = 2; i <= message.length; i ++) {
+        subMessage = message.substring(0, i)
+        console.log(subMessage);
+      }
+
+    }
+
+    printGreetings();
+
+  </script>
+
+</html>
