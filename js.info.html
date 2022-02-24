@@ -18,24 +18,73 @@
 
   <body>
 
-    <section class="preview">
-
-
-
-    </section>
-
+<div class="outputik">Lorem ipsum dolor sit </div>
+    
+    
   </body>
   <script>
-    let ask = (question, yes, no) => {
-    if (confirm(question)) yes();
-    else no();
-  }
+    let outputik = document.querySelector("outputik");
+    let i = 10;
+    for (i; i <= 0; i--){
+      if (i == 10) {
+        const para = document.createElement('p');
+        para.textContent = "Countdown 10";
+        outputik.appendChild(para);
+      }
+      else if (i == 9) {
+        const para = document.createElement('p');
+        para.textContent = "Countdown 9";
+        outputik.appendChild(para);
+      }
+      else if (i == 8) {
+        const para = document.createElement('p');
+        para.textContent = "Countdown 8";
+        outputik.appendChild(para);
+      }
+      else if (i == 7) {
+        const para = document.createElement('p');
+        para.textContent = "Countdown 7";
+        outputik.appendChild(para);
+      }
+      else if (i == 6) {
+        const para = document.createElement('p');
+        para.textContent = "Countdown 6";
+        outputik.appendChild(para);
+      }
+      else if (i == 5) {
+        const para = document.createElement('p');
+        para.textContent = "Countdown 5";
+        outputik.appendChild(para);
+      }
+      else if (i == 4) {
+        const para = document.createElement('p');
+        para.textContent = "Countdown 4";
+        outputik.appendChild(para);
+      }
+      else if (i == 3) {
+        const para = document.createElement('p');
+        para.textContent = "Countdown 3";
+        outputik.appendChild(para);
+      }
+      else if (i == 2) {
+        const para = document.createElement('p');
+        para.textContent = "Countdown 2";
+        outputik.appendChild(para);
+      }
+      else if (i == 1) {
+        const para = document.createElement('p');
+        para.textContent = "Countdown 1";
+        outputik.appendChild(para);
+      }
+      else if (i == 0) {
+        const para = document.createElement('p');
+        para.textContent = "Blastoff";
+        outputik.appendChild(para);
+      }
+    }
+      
 
-    ask(
-      "Do you agree?",
-      () =>  alert("You agreed.") ,
-      () => alert("You canceled the execution.")
-    );
-  </script>
+
+  </script> 
 
 </html>
