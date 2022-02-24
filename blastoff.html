@@ -30,9 +30,13 @@
     let loremDiv = document.querySelector("div");
     loremDiv.appendChild(firstP);
     
+    function delay(time) {
+        return new Promise(resolve => setTimeout(resolve, time));
+    }
 
+   
 
-    for (let i = 10; i >= 0; i--){
+    for (let i = 10, time = 1000; i >= 0; i--, time = time + 500){
         
         if (i == 10) {
             console.log(i);
@@ -40,66 +44,99 @@
             createdElement.textContent = "Countdown 10";
             loremDiv.appendChild(createdElement);
             
+            
         }
         else if (i == 9) {
-            console.log(i);
-            let createdElement = document.createElement("p");
-            createdElement.textContent = "Countdown 9";
-            loremDiv.appendChild(createdElement);
+            delay(1000).then(() => {
+                console.log(i);
+                let createdElement = document.createElement("p");
+                createdElement.textContent = "Countdown 9";
+                loremDiv.appendChild(createdElement);
+            });
+
         }
+
         else if (i == 8) {
-            console.log(i);
-            let createdElement = document.createElement("p");
-            createdElement.textContent = "Countdown 8";
-            loremDiv.appendChild(createdElement);
+            delay(1500).then(() => {
+                console.log(i);
+                let createdElement = document.createElement("p");
+                createdElement.textContent = "Countdown 8";
+                loremDiv.appendChild(createdElement);
+            });
+            
+        
         }
         else if (i == 7) {
-            console.log(i);
-            let createdElement = document.createElement("p");
-            createdElement.textContent = "Countdown 7";
-            loremDiv.appendChild(createdElement);
+            delay(2000).then(() => {
+                console.log(i);
+                let createdElement = document.createElement("p");
+                createdElement.textContent = "Countdown 7";
+                loremDiv.appendChild(createdElement);
+            });
         }
         else if (i == 6) {
-            console.log(i);
-            let createdElement = document.createElement("p");
-            createdElement.textContent = "Countdown 6";
-            loremDiv.appendChild(createdElement);
+            delay(2500).then(() => {
+                console.log(i);
+                let createdElement = document.createElement("p");
+                createdElement.textContent = "Countdown 6";
+                loremDiv.appendChild(createdElement);
+            });
+        }
+        else if (i == 6) {
+            delay(3000).then(() => {
+                console.log(i);
+                let createdElement = document.createElement("p");
+                createdElement.textContent = "Countdown 6";
+                loremDiv.appendChild(createdElement);
+            });
         }
         else if (i == 5) {
-            console.log(i);
-            let createdElement = document.createElement("p");
-            createdElement.textContent = "Countdown 5";
-            loremDiv.appendChild(createdElement);
+            delay(3500).then(() => {
+                console.log(i);
+                let createdElement = document.createElement("p");
+                createdElement.textContent = "Countdown 5";
+                loremDiv.appendChild(createdElement);
+            });
         }
         else if (i == 4) {
-            console.log(i);
-            let createdElement = document.createElement("p");
-            createdElement.textContent = "Countdown 4";
-            loremDiv.appendChild(createdElement);
+            delay(4000).then(() => {
+                console.log(i);
+                let createdElement = document.createElement("p");
+                createdElement.textContent = "Countdown 4";
+                loremDiv.appendChild(createdElement);
+            });
         }
         else if (i == 3) {
-            console.log(i);
-            let createdElement = document.createElement("p");
-            createdElement.textContent = "Countdown 3";
-            loremDiv.appendChild(createdElement);
+            delay(4500).then(() => {
+                console.log(i);
+                let createdElement = document.createElement("p");
+                createdElement.textContent = "Countdown 3";
+                loremDiv.appendChild(createdElement);
+            });
         }
         else if (i == 2) {
-            console.log(i);
-            let createdElement = document.createElement("p");
-            createdElement.textContent = "Countdown 2";
-            loremDiv.appendChild(createdElement);
+            delay(5000).then(() => {
+                console.log(i);
+                let createdElement = document.createElement("p");
+                createdElement.textContent = "Countdown 2";
+                loremDiv.appendChild(createdElement);
+            });
         }
         else if (i == 1) {
-            console.log(i);
-            let createdElement = document.createElement("p");
-            createdElement.textContent = "Countdown 1";
-            loremDiv.appendChild(createdElement);
+            delay(5500).then(() => {
+                console.log(i);
+                let createdElement = document.createElement("p");
+                createdElement.textContent = "Countdown 1";
+                loremDiv.appendChild(createdElement);
+            });
         }
         else if (i == 0) {
-            console.log(i);
-            let createdElement = document.createElement("p");
-            createdElement.textContent = "Blastoff";
-            loremDiv.appendChild(createdElement);
+            delay(6000).then(() => {
+                console.log(i);
+                let createdElement = document.createElement("p");
+                createdElement.textContent = "Blastoff";
+                loremDiv.appendChild(createdElement);
+            });
         }
     }
         
