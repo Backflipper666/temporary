@@ -33,13 +33,17 @@
                 }
             }
             else if (people[i] == "Phil" || people[i] == "Lola"){
-                if (i === people.length - 1){
-                    refused.textContent += "";
+                if (people[i].includes("Lola")){
+                    refused.textContent += people[i] + "";
                 }
-                else {
-                refused.textContent += people[i] + ", ";
+                else{
+                    refused.textContent += people[i] + ", "
                 }
+               
+                        
+                
             }
+            
         }
 
     </script>
