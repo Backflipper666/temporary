@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Js info</title>
+    <title>Loops: Task 2</title>
     <style>
       p {
         color: purple;
@@ -18,73 +19,60 @@
 
   <body>
 
-<div class="outputik">Lorem ipsum dolor sit </div>
-    
-    
+    <section class="preview">
+
+
+
+    </section>
+
   </body>
   <script>
-    let outputik = document.querySelector("outputik");
-    let i = 10;
-    for (i; i <= 0; i--){
-      if (i == 10) {
-        const para = document.createElement('p');
-        para.textContent = "Countdown 10";
-        outputik.appendChild(para);
-      }
-      else if (i == 9) {
-        const para = document.createElement('p');
-        para.textContent = "Countdown 9";
-        outputik.appendChild(para);
-      }
-      else if (i == 8) {
-        const para = document.createElement('p');
-        para.textContent = "Countdown 8";
-        outputik.appendChild(para);
-      }
-      else if (i == 7) {
-        const para = document.createElement('p');
-        para.textContent = "Countdown 7";
-        outputik.appendChild(para);
-      }
-      else if (i == 6) {
-        const para = document.createElement('p');
-        para.textContent = "Countdown 6";
-        outputik.appendChild(para);
-      }
-      else if (i == 5) {
-        const para = document.createElement('p');
-        para.textContent = "Countdown 5";
-        outputik.appendChild(para);
-      }
-      else if (i == 4) {
-        const para = document.createElement('p');
-        para.textContent = "Countdown 4";
-        outputik.appendChild(para);
-      }
-      else if (i == 3) {
-        const para = document.createElement('p');
-        para.textContent = "Countdown 3";
-        outputik.appendChild(para);
-      }
-      else if (i == 2) {
-        const para = document.createElement('p');
-        para.textContent = "Countdown 2";
-        outputik.appendChild(para);
-      }
-      else if (i == 1) {
-        const para = document.createElement('p');
-        para.textContent = "Countdown 1";
-        outputik.appendChild(para);
-      }
-      else if (i == 0) {
-        const para = document.createElement('p');
-        para.textContent = "Blastoff";
-        outputik.appendChild(para);
-      }
-    }
+    const name = 'Mustafa';
+    const para = document.createElement('p');
+
+    const phonebook = [
+      { name : 'Chris', number : '1549' },
+      { name : 'Li Kang', number : '9634' },
+      { name : 'Anne', number : '9065' },
+      { name : 'Francesca', number : '3001' },
+      { name : 'Mustafa', number : '6888' },
+      { name : 'Tina', number : '4312' },
+      { name : 'Bert', number : '7780' },
+      { name : 'Jada', number : '2282' },
+    ]
+
+    // Add your code here
+    let input = prompt("Whose number are you looking for?");
+    function capitalizeFirstLetter() {
+      let rest;
       
+      console.log(input[0]);
+      return console.log(`${input[0].toUpperCase()}${input.slice(1)}`);
+      
+    }
 
+    capitalizeFirstLetter();
 
-  </script> 
+    let i = 0;
+    while(i < phonebook.length){
+      if (input != phonebook[i].name) {
+        para.textContent = "Sorry, the name you entered in not in the phonebook or you spelled the name wrong. Try entering the name with the first letter Capital"
+      }
+      if (input === phonebook[i].name){
+        para.textContent = `name: ${phonebook[i].name}, phone: ${phonebook[i].number}`
+        break;
+      }
+      
+      else{
+        i++;
+      }
+      
+    }
+    
+
+    // Don't edit the code below here!
+    const section = document.querySelector('section');
+    section.appendChild(para);
+  </script>
 
 </html>
