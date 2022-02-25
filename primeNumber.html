@@ -26,33 +26,13 @@
 
   </body>
   <script>
-    let i = 500;
-    const para = document.createElement('p');
+for (let i = 0; i < 10; i++) {
 
-    function isPrime(num) {
-      for(let i = 2; i < num; i++) {
-        if(num % i === 0) {
-          return false;
-        }
-      }
+if (i % 2) {
+  alert( i );
+}
 
-      return true;
-    }
-    
-
-    // Add your code here
-    for (let i = 500; i > 1; i--) {
-      if (i == 2) {
-        para.textContent += i + "";
-      }
-      if (isPrime(i) == true && i != 2) {
-        para.textContent += i + ", ";
-      }
-    }
-    
-    // Don't edit the code below here!
-    const section = document.querySelector('section');
-    section.appendChild(para);
+}
   </script>
 
 </html>
